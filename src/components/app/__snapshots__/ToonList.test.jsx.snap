@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToonList component makes ul filled with lis from Toon component 1`] = `
+<DocumentFragment>
+  <h1>
+    Loading...
+  </h1>
+</DocumentFragment>
+`;
