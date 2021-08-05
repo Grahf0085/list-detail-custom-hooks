@@ -8,6 +8,7 @@ import {
 import ToonList from './ToonList';
 import ToonDetailPage from './ToonDetailPage';
 import Header from './Header';
+import './app.css';
 
 export default function App() {
   return (<section>

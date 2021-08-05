@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Toon from './Toon';
 import { useToons } from '../../state/character';
+import './toonlist.css';
 
 const ToonList = () => {
   const [page, setPage] = useState(1);
@@ -20,7 +21,7 @@ const ToonList = () => {
         prevPage - 1)}>&lt;</button>
       {page}
       <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
-      <ul>{toonElements}</ul>;
+      <ul>{toonElements}</ul>
     </>
   );
 };
