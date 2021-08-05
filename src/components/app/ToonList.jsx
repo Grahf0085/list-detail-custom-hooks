@@ -7,7 +7,7 @@ import './toonlist.css';
 const ToonList = () => {
   const [page, setPage] = useState(1);
   const { toons, loading } = useToons(page);
-  if(loading) return <h1>Loading...</h1>;
+  if(loading) return <h1>Loading List...</h1>;
 
   const toonElements = toons.map((toon) => (
     <li key={toon.id}>

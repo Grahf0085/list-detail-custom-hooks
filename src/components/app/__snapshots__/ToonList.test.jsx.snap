@@ -3,7 +3,7 @@
 exports[`ToonList component makes ul filled with lis from Toon component 1`] = `
 <DocumentFragment>
   <h1>
-    Loading...
+    Loading List...
   </h1>
 </DocumentFragment>
 `;

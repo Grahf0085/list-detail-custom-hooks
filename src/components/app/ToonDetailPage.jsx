@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 const ToonDetailPage = () => {
   const { id } = useParams();
   const toon = toonDetails(id);
-  if(!toon) return <h1>Loading...</h1>;
+  if(!toon) return <h1>Loading Details...</h1>;
 
   return (
     <section role="details">
