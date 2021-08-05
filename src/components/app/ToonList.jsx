@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import Toon from './Toon';
-import './toonlist.css';
+import { useToons } from '../../state/character';
 
-const ToonList = ({ toons }) => {
+const ToonList = () => {
+  const [page, setPage] = useState(1);
+  const { toons, loading } = useToons(page);
+  if(loading) return <h1>Loading...</h1>;
+
   const toonElements = toons.map((toon) => (
     <li key={toon.id}>
       <Toon {...toon} />
     </li>
   ));
 
-  return <ul>{toonElements}</ul>;
+  return (
+    <>
+      <button disabled={page <= 1} onClick={() => setPage((prevPage) => 
+        prevPage - 1)}>&lt;</button>
+      {page}
+      <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
+      <ul>{toonElements}</ul>;
+    </>
+  );
 };
 
 ToonList.propTypes = {

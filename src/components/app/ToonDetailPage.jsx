@@ -1,14 +1,22 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import { toonDetails } from '../../state/character';
 import PropTypes from 'prop-types';
 
-const ToonDetailPage = ({ name, status, species, gender }) => (
-  <section role="details">
-    <h2>Name: {name}</h2>
-    <h3>Status: {status}</h3>
-    <h3>Species: {species}</h3>
-    <h3>Gender: {gender}</h3>
-  </section>
-);
+const ToonDetailPage = () => {
+  const { id } = useParams();
+  const toon = toonDetails(id);
+  if(!toon) return <h1>Loading...</h1>;
+
+  return (
+    <section role="details">
+      <h2>Name: {toon.name}</h2>
+      <h3>Status: {toon.status}</h3>
+      <h3>Species: {toon.species}</h3>
+      <h3>Gender: {toon.gender}</h3>
+    </section>
+  );
+};
 
 ToonDetailPage.propTypes = {
   name: PropTypes.string.isRequired,
