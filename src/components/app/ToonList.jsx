@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import Toon from './Toon';
 import { useToons } from '../../state/character';
@@ -15,12 +15,17 @@ const ToonList = () => {
     </li>
   ));
 
+  // useEffect(() => {
+  //   setPage(1);
+  // }, []);
+  console.log(toons.length);
   return (
     <>
       <button disabled={page <= 1} onClick={() => setPage((prevPage) => 
         prevPage - 1)}>&lt;</button>
       {page}
-      <button onClick={() => setPage((prevPage) => prevPage + 1)}>&gt;</button>
+      <button disabled={toons.length < 3} onClick={() => 
+        setPage((prevPage) => prevPage + 1)}>&gt;</button>
       <ul>{toonElements}</ul>
     </>
   );
