@@ -1,0 +1,7 @@
+ul {
+  column-count: 3;
+}
+
+li {
+  list-style: none;
+}

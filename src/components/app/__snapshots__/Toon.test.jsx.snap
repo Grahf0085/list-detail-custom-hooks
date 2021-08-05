@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Toon component renders clickable image 1`] = `
+<DocumentFragment>
+  <figure>
+    <a
+      href="/character/1"
+    >
+      <img
+        alt="Rick Sanchez"
+        src="https://rickandmortyapi.com/api/character/avatar/1.jpeg"
+      />
+    </a>
+  </figure>
+</DocumentFragment>
+`;
